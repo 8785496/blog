@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class HelloController extends Controller
 {
     /**
-     * @Route("/app/example", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function indexAction($name = 10)
     {
@@ -19,6 +19,9 @@ class HelloController extends Controller
         ]);
     }
     
+    /**
+     * @Route("/hello/index")
+     */
     public function createAction() 
     {
         $product = new Product();
@@ -29,6 +32,9 @@ class HelloController extends Controller
         $em->persist($product);
         $em->flush();
 
-        return new Response('Created product id '.$product->getId());
+        //return new Response('Created product id '.$product->getId());
+        return $this->render('default/index.html.twig', [
+            'phpinfo' => 'Created product id '.$product->getId()
+        ]);
     }
 }

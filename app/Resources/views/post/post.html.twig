@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        ID {{ post.getPostId }}
+    </div>
+    <div>
+        Content {{ post.getContent }}
+    </div>
+    <div>
+        Author ID {{ post.getAuthorId }}
+    </div>
+{% endblock %}

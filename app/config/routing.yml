@@ -2,10 +2,10 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-hello_y:
-    path:      /hello/create
-    defaults:  { _controller: AppBundle:Hello:create }
-    
-hello_x:
-    path:      /hello/index
-    defaults:  { _controller: AppBundle:Hello:index }
+#hello_y:
+#    path:      /hello/create
+#    defaults:  { _controller: AppBundle:Hello:create }
+#    
+#hello_x:
+#    path:      /hello/index
+#    defaults:  { _controller: AppBundle:Hello:index }
