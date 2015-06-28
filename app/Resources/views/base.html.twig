@@ -7,6 +7,22 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% block navigation %}
+            <ul>
+                <li>
+                    <a href="{{ path('home') }}">Главная</a>
+                </li>
+                <li>
+                    <a href="{{ path('post_create') }}">Создать пост</a>
+                </li>
+                <li>
+                    <a href="{{ path('login') }}">Вход</a>
+                </li>
+                <li>
+                    <a href="{{ path('logout') }}">Выход</a>
+                </li>
+            </ul>
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

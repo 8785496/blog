@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for post in posts %}
+        <div>
+            <a href="{{ path("post_id", {"id": post.getPostId}) }}">
+                ID {{ post.getPostId }}
+            </a>
+        </div>
+        <div>
+            Content {{ post.getContent }}
+        </div>
+        <div>
+            Author ID {{ post.getAuthorId }}
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}

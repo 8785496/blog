@@ -2,6 +2,8 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
+logout:
+    path:   /logout
 #hello_y:
 #    path:      /hello/create
 #    defaults:  { _controller: AppBundle:Hello:create }
